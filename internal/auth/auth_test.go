@@ -36,12 +36,6 @@ func TestAuth(t *testing.T) {
 			expected:    "",
 			expecterErr: "malformed authorization header",
 		},
-		"CI failure": {
-			key:         "Authorization",
-			value:       "ApiKey 123",
-			expected:    "1234",
-			expecterErr: "malformed authorization header",
-		},
 	}
 
 	for name, tc := range tests {
